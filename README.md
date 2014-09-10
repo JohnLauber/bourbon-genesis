@@ -8,7 +8,7 @@ John Lauber ( [@johnlauber](http://twitter.com/johnlauber) / [littlelauberdesign
 
 ## Summary
 
-WordPress Starter Theme for use as Child Theme of the Genesis Framework for building custom themes, using Bourbon/SCSS and Grunt. Tested with WordPress 3.9.2 and Genesis 2.1.2. This is a fork of Matt Banks Starter theme using Compass/SCSS. 
+WordPress Starter Theme for use as Child Theme of the Genesis Framework for building custom themes, using Bourbon/SCSS and Grunt. Tested with WordPress 3.9.2 (and now 4.0) and Genesis 2.1.2. This is a fork of Matt Banks Starter(https://github.com/mattbanks/WordPress-Starter-Theme) theme that's using Compass/SCSS. 
 
 ## Usage
 
@@ -41,11 +41,10 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 
 ### Suggested Plugins
 
-* [Use Google Libraries](http://wordpress.org/extend/plugins/use-google-libraries/)
 * [WordPress SEO by Yoast](http://wordpress.org/extend/plugins/wordpress-seo/)
 * [Gravity Forms](http://www.gravityforms.com/)
 
-![dependencies](https://david-dm.org/mattbanks/Genesis-Starter-Child-Theme.png)
+![dependencies](http://bourbon.io/)
 
 ### Changelog
 
