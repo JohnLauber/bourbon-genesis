@@ -1,0 +1,26 @@
+{
+  "name": "genesis-bourbon",
+  "version": "0.1.1",
+  "homepage": "https://github.com/Varying-Vagrant-Vagrants/VVV",
+  "authors": [
+    "John Lauber <john@johnlauber.com>"
+  ],
+  "description": "Genesis child theme using Bourbon.io SCSS",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "genesis",
+    "theme",
+    "child"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/js/vendor",
+    "test",
+    "tests"
+  ]
+}
