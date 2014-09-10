@@ -1,4 +1,4 @@
-# WordPress Genesis Starter Child Theme
+# WordPress Genesis Starter Child Theme with Bourbon
 
 Version: 1.0.1
 
