@@ -24,7 +24,7 @@ Rename folder to your theme name, change the `assets/styles/source/style.scss` i
 
 To concatenate and minify your jQuery plugins, add them to the `assets/js/vendor` directory and add the `js` filename and path to the `Gruntfile` `uglify` task. Previous versions of the starter theme automatically pulled all plugins in the `vendor` directory, but this has changed to allow more granular control and for managing plugins and assets with bower.
 
-Also in the 'assets/styles' directory, run the [Bourbon install instructions] (http://bourbon.io/) or you won't be able to run grunt without an error. I plan on adding a Yeoman generator to take care of this.
+Bourbon gets loaded as a dependency in package.json and gruntfile.js. There may be a better way to do this, but I haven’t found it yet.
 
 ### Bower
 
