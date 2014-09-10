@@ -30,8 +30,8 @@ module.exports = function(grunt) {
         sass: {
             dev: {
                 options: {
-                  style: 'expanded',
-                  compass: false
+                    loadPath: require('node-bourbon').includePaths,    
+                    style: 'expanded'
                 },
                 files: {
                   'style.css': 'assets/styles/**/style.{scss,sass}'
