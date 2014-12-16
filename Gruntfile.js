@@ -23,6 +23,10 @@ module.exports = function(grunt) {
             livereload: {
                 options: { livereload: true },
                 files: ['style.css', 'assets/js/*.js', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+            },
+            styles: {
+                files: ['build/style.css'],
+                tasks: ['autoprefixer']
             }
         },
 
@@ -37,6 +41,17 @@ module.exports = function(grunt) {
                   'style.css': 'assets/styles/**/style.{scss,sass}'
                 }
               },
+        },
+
+        autoprefixer: {
+            options: {
+              browsers: ['last 2 versions', 'ie 8', 'ie 9']
+            },
+            dist: {
+                files: {
+                    'style.css': 'build/style.css'
+                }
+            }
         },
 
         // javascript linting with jshint
@@ -125,7 +140,10 @@ module.exports = function(grunt) {
     // rename tasks
     grunt.renameTask('rsync', 'deploy');
 
+    //load the autoprefixer task
+    grunt.loadNpmTasks('grunt-autoprefixer');
+
     // register task
-    grunt.registerTask('default', ['sass', 'uglify', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['sass', 'uglify', 'imagemin', 'autoprefixer', 'watch']);
 
 };
