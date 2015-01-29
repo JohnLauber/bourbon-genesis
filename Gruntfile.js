@@ -133,7 +133,7 @@ module.exports = function(grunt) {
                     host: "user@host.com"
                 }
             }
-        }
+        },
 
         browserSync: {
             dev: {
