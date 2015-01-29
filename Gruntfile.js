@@ -135,13 +135,31 @@ module.exports = function(grunt) {
             }
         }
 
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : 'style.css'
+                },
+                options: {
+                    proxy: "local.test.dev", // < change to local address for site
+                    ghostmode: false,
+                    port: 8080,
+                    tunnel: "testing",
+                    watchTask: true // < VERY important
+                }
+            }
+        }
+
     });
 
     // rename tasks
     grunt.renameTask('rsync', 'deploy');
 
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-browser-sync');
+
     // register task
-    grunt.registerTask('default', ['sass', 'uglify', 'imagemin', 'autoprefixer','watch']);
+    grunt.registerTask('default', ['browserSync', 'sass', 'uglify', 'imagemin', 'autoprefixer','watch']);
+
 
 };
