@@ -23,10 +23,6 @@ module.exports = function(grunt) {
             livereload: {
                 options: { livereload: true },
                 files: ['style.css', 'assets/js/*.js', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
-            },
-            styles: {
-                files: ['build/style.css'],
-                tasks: ['autoprefixer']
             }
         },
 
@@ -38,21 +34,25 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                  'build/style.css': 'assets/styles/**/style.{scss,sass}'
+                  'style.css': 'assets/styles/**/style.{scss,sass}'
                 }
               },
         },
 
-            autoprefixer: {
-                options: {
-                  browsers: ['last 2 versions', 'ie 8', 'ie 9']
-                },
-                dist: {
-                    files: {
-                        'style.css': 'build/style.css'
-                    }
-                }
+        postcss: {
+            options: {
+              map: false,
+              processors: [
+                require('autoprefixer-core')({browsers: 'last 3 versions, ie 9'}),
+                require('postcss-flexboxfixer'),
+                require('postcss-gradientfixer'),
+                require('csswring')
+              ]
             },
+            dist: {
+              src: 'style.css'
+            }
+        },
 
         // javascript linting with jshint
         jshint: {
@@ -155,11 +155,10 @@ module.exports = function(grunt) {
     // rename tasks
     grunt.renameTask('rsync', 'deploy');
 
-    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-browser-sync');
 
     // register task
-    grunt.registerTask('default', ['browserSync', 'sass', 'uglify', 'imagemin', 'autoprefixer','watch']);
+    grunt.registerTask('default', ['browserSync', 'sass', 'uglify', 'imagemin', 'postcss','watch']);
 
 
 };
