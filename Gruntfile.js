@@ -23,6 +23,10 @@ module.exports = function(grunt) {
             livereload: {
                 options: { livereload: true },
                 files: ['style.css', 'assets/js/*.js', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+            },
+            styles: {
+                files: ['build/style.css'],
+                tasks: ['postcss']
             }
         },
 
@@ -41,16 +45,18 @@ module.exports = function(grunt) {
 
         postcss: {
             options: {
-              map: false,
+              map: true,
               processors: [
-                require('autoprefixer-core')({browsers: 'last 3 versions, ie 9'}),
+                require('autoprefixer-core')({browsers: '> 3%'}),
                 require('postcss-flexboxfixer'),
                 require('postcss-gradientfixer'),
+                require('cssgrace'),
                 require('csswring')
               ]
             },
             dist: {
-              src: 'style.css'
+              src: 'style.css',
+              dest: 'style.css'
             }
         },
 

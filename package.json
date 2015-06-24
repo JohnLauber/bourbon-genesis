@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
+    "cssgrace": "^2.0.2",
     "csswring": "^3.0.5",
     "grunt": "~0.4.2",
     "grunt-autoprefixer": "^2.0.0",
