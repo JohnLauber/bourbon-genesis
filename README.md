@@ -24,6 +24,8 @@ Rename folder to your theme name, change the `assets/styles/source/style.scss` i
 
 To concatenate and minify your jQuery plugins, add them to the `assets/js/vendor` directory and add the `js` filename and path to the `Gruntfile` `uglify` task. Previous versions of the starter theme automatically pulled all plugins in the `vendor` directory, but this has changed to allow more granular control and for managing plugins and assets with bower.
 
+In the Grunt file, be sure to change the BrowserSync line "local.testing.dev" to your local web address you want to sync. 
+
 Bourbon gets loaded as a dependency in package.json and gruntfile.js. There may be a better way to do this, but I haven’t found it yet.
 
 ### Bower
@@ -40,6 +42,8 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 2. Easy to customize
 3. Grunt and LiveReload to make it more gooder
 4. Child theme tweaks
+5. Utilizes PostCSS for browser backwards compatibility
+6. Utilizes BrowserSync for testing across devices
 
 ### Suggested Plugins
 
@@ -50,7 +54,7 @@ Requires: [bourbon.io](http://bourbon.io/)
 
 ### Changelog
 #### Version 1.1
-* Updated package.json and gruntfile to use new autoprefixer with flexbox fixer.
+* Updated package.json and gruntfile to use new autoprefixer (PostCSS) with flexbox fixer.
 * Removed some of the includes from bourbon as they're deprecated.
 
 #### Verson 1.0
@@ -64,7 +68,7 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 
 * [Matt Banks Starter](https://github.com/mattbanks/WordPress-Starter-Theme)
 * [SASS / SCSS](http://sass-lang.com/)
-* [Compass](http://compass-style.org)
+* [Bourbon](http://bourbon.io)
 * [Genesis Framework](http://my.studiopress.com/themes/genesis/)
 * [Bill Erickson's Genesis Child Theme](https://github.com/billerickson/BE-Genesis-Child)
 * [HTML5 Boilerplate](http://html5boilerplate.com)
