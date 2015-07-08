@@ -69,6 +69,7 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 * [Matt Banks Starter](https://github.com/mattbanks/WordPress-Starter-Theme)
 * [SASS / SCSS](http://sass-lang.com/)
 * [Bourbon](http://bourbon.io)
+* [BrowserSync](http://www.browsersync.io)
 * [Genesis Framework](http://my.studiopress.com/themes/genesis/)
 * [Bill Erickson's Genesis Child Theme](https://github.com/billerickson/BE-Genesis-Child)
 * [HTML5 Boilerplate](http://html5boilerplate.com)
