@@ -1,6 +1,6 @@
 # WordPress Genesis Starter Child Theme with Bourbon
 
-Version: 1.1.1
+Version: 1.2
 
 ## Contributors:
 
@@ -53,6 +53,9 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 Requires: [bourbon.io](http://bourbon.io/)
 
 ### Changelog
+#### Version 1.2
+* Updated plugin activation code with the latest version of TGM Plugin Activation. 
+
 #### Version 1.1
 * Updated package.json and gruntfile to use new autoprefixer (PostCSS) with flexbox fixer.
 * Removed some of the includes from bourbon as they're deprecated.
