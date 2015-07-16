@@ -53,8 +53,12 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 Requires: [bourbon.io](http://bourbon.io/)
 
 ### Changelog
+#### Version 1.2.1
+* Moved all media queries (out of the _genesis.scss partial) to the correct _media.scss partial. It should
+have been there in the first place.
+
 #### Version 1.2
-* Updated plugin activation code with the latest version of TGM Plugin Activation. 
+* Updated plugin activation code with the latest version of TGM Plugin Activation.
 
 #### Version 1.1
 * Updated package.json and gruntfile to use new autoprefixer (PostCSS) with flexbox fixer.
