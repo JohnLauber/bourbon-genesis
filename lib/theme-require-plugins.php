@@ -12,7 +12,7 @@ function mb_register_required_plugins() {
 			'slug' 				=> 'wordpress-seo',
 			'required' 			=> true,
 			'force_activation'	=> true,
-			'is_callable'		= 'wpseo_init',
+			'is_callable'		=> 'wpseo_init',
 		),
 
 		// array(
