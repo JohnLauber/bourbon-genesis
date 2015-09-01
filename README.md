@@ -53,6 +53,9 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 Requires: [bourbon.io](http://bourbon.io/)
 
 ### Changelog
+#### Version 1.2.2 
+* Minor change to tasks order in GruntFile. BrowserSync starts last instead of first in case there's an error in the other tasks. PostCSS runs immediately after SASS, which seems more logical too. 
+
 #### Version 1.2.1
 * Moved all media queries (out of the _genesis.scss partial) to the correct _media.scss partial. It should
 have been there in the first place.
