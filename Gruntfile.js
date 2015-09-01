@@ -83,7 +83,7 @@ module.exports = function(grunt) {
                 files: {
                     'assets/js/plugins.min.js': [
                         'assets/js/source/plugins.js',
-                        // 'assets/js/vendor/yourplugin/yourplugin.js',
+                        // 'assets/js/vendor/yourplugin.js',
                     ]
                 }
             },
@@ -147,7 +147,7 @@ module.exports = function(grunt) {
                     src : 'style.css'
                 },
                 options: {
-                    proxy: "local.test.dev", // < change to local address for site
+                    proxy: "local.test.dev", // < change to local site address
                     ghostmode: false,
                     port: 8080,
                     tunnel: "testing",
@@ -164,7 +164,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
 
     // register task
-    grunt.registerTask('default', ['browserSync', 'sass', 'uglify', 'imagemin', 'postcss','watch']);
-
+    grunt.registerTask('default', ['sass', 'postcss', 'uglify', 'imagemin', 'browserSync', 'watch']);
 
 };
