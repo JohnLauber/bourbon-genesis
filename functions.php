@@ -50,6 +50,9 @@ function child_theme_setup() {
 	// Structural Wraps
 	add_theme_support( 'genesis-structural-wraps', array( 'header', 'nav', 'subnav', 'inner', 'footer-widgets', 'footer' ) );
 
+	//Accessibility
+	add_theme_support( 'genesis-accessibility', array( 'headings', 'drop-down-menu', 'search-form', 'skip-links', 'rems' ) );
+
 	// Unregister Secondary Nav Menu
 	add_theme_support( 'genesis-menus', array( 'primary' => 'Primary Navigation Menu' ) );
 
