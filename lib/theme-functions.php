@@ -159,14 +159,14 @@ function mb_html5_doctype() {
  * Load custom favicon to header
  */
 function mb_custom_favicon_filter( $favicon_url ) {
-	return get_stylesheet_directory_uri() . '/images/favicon.ico';
+	return get_stylesheet_directory_uri() . '/assets/images/favicon.ico';
 }
 
 /**
  * Load apple touch icon in header
  */
 function mb_apple_touch_icon() {
-	echo '<link rel="apple-touch-icon" href="' . get_stylesheet_directory_uri() . '/images/apple-touch-icon.png">';
+	echo '<link rel="apple-touch-icon" href="' . get_stylesheet_directory_uri() . '/assets/images/apple-touch-icon.png">';
 }
 
 /**

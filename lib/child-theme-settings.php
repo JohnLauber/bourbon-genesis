@@ -59,7 +59,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		// Set the default values
 		$default_settings = array(
 			'footer-left'   => 'Copyright &copy; ' . date( 'Y' ) . ' All Rights Reserved',
-			'footer-right' => 'Site by <a href="http://www.littlelauberdesigns.com">John Lauber</a>',
+			'footer-right' => 'Site by <a href="http://www.littlelauberdesigns.com">Little Lauber Designs</a>',
 		);
 
 		// Create the Admin Page

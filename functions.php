@@ -9,16 +9,19 @@
  * are defined below this setup function.
  *
  */
+//* Enqueue scripts
+add_action( 'wp_enqueue_scripts', 'minimum_enqueue_scripts' );
+function minimum_enqueue_scripts() {
+ wp_enqueue_style( 'minimum-google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
+}
 
-add_action( 'genesis_setup','child_theme_setup', 15 );
+add_action( 'genesis_setup', 'child_theme_setup', 15 );
 function child_theme_setup() {
 
 	/****************************************
 	Define child theme version
 	*****************************************/
-
 	define( 'CHILD_THEME_VERSION', filemtime( get_stylesheet_directory() . '/style.css' ) );
-
 
 	/****************************************
 	Include theme helper functions
