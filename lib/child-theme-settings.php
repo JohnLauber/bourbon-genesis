@@ -39,7 +39,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 			'submenu' => array(
 				'parent_slug' => 'genesis',
 				'page_title'  => 'Genesis - Child Theme Settings',
-				'menu_title'  => 'Child Theme Settings',
+				'menu_title'  => 'Theme Footer Settings',
 			)
 		);
 
