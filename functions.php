@@ -40,7 +40,15 @@ function child_theme_setup() {
 	/****************************************
 	Backend
 	*****************************************/
+		/*************
+	Load custom styles
+	***********/
+	function fraley_load_my_styles() {
 
+		if (!is_admin()) {
+			wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:400,700', array(), CHILD_THEME_VERSION );
+		}
+	}
 	// Image Sizes
 	// add_image_size( $name, $width = 0, $height = 0, $crop = false );
 
@@ -163,7 +171,8 @@ function child_theme_setup() {
 
 	// Remove Query Strings From Static Resources
 	add_filter( 'script_loader_src', 'mb_remove_script_version', 15, 1 );
-	add_filter( 'style_loader_src', 'mb_remove_script_version', 15, 1 );
+	//DO NOT do the following if enqueueing Google Fonts. 
+	//add_filter( 'style_loader_src', 'mb_remove_script_version', 15, 1 );
 
 	// Remove Read More Jump
 	add_filter( 'the_content_more_link', 'mb_remove_more_jump_link' );
