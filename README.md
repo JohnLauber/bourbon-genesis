@@ -1,6 +1,6 @@
 # WordPress Genesis Starter Child Theme with Bourbon
 
-Version: 1.2
+Version: 1.4
 
 ## Contributors:
 
@@ -53,6 +53,9 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 Requires: [bourbon.io](http://bourbon.io/)
 
 ### Changelog
+#### Version 1.4
+Moved the Google Font enqueue to the functions file and removed the static resource filter on the CSS files. This was not allowing the enqueueing of the Google fonts. Just replace the string from Google Fonts if using different fonts and change SCSS appropriately. 
+
 #### Version 1.3
 * With the release Genesis 2.2, I added the accessibility features to the functions and created a new scss partial to hold the latest Genesis Sample additions.
 
