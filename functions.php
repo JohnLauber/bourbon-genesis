@@ -9,11 +9,6 @@
  * are defined below this setup function.
  *
  */
-//* Enqueue scripts
-add_action( 'wp_enqueue_scripts', 'minimum_enqueue_scripts' );
-function minimum_enqueue_scripts() {
- wp_enqueue_style( 'minimum-google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
-}
 
 add_action( 'genesis_setup', 'child_theme_setup', 15 );
 function child_theme_setup() {
@@ -40,15 +35,12 @@ function child_theme_setup() {
 	/****************************************
 	Backend
 	*****************************************/
-		/*************
-	Load custom styles
-	***********/
-	function fraley_load_my_styles() {
-
-		if (!is_admin()) {
-			wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:400,700', array(), CHILD_THEME_VERSION );
-		}
+	//* Enqueue scripts
+	add_action( 'wp_enqueue_scripts', 'bourbon_genesis_enqueue_scripts' );
+	function bourbon_genesis_enqueue_scripts() {
+	 wp_enqueue_style( 'bourbon-genesis-google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
 	}
+	
 	// Image Sizes
 	// add_image_size( $name, $width = 0, $height = 0, $crop = false );
 
