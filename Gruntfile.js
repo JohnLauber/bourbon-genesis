@@ -50,6 +50,7 @@ module.exports = function(grunt) {
                 require('postcss-flexboxfixer'),
                 require('postcss-gradientfixer'),
                 require('autoprefixer-core')({browsers: '> 2%'}),
+                require('postcss-flexibility'),
                 require('cssgrace'),
                 require('csswring')
               ]
