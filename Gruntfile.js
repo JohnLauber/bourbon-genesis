@@ -47,9 +47,9 @@ module.exports = function(grunt) {
             options: {
               map: true,
               processors: [
-                require('autoprefixer-core')({browsers: '> 3%'}),
                 require('postcss-flexboxfixer'),
                 require('postcss-gradientfixer'),
+                require('autoprefixer-core')({browsers: '> 2%'}),
                 require('cssgrace'),
                 require('csswring')
               ]
