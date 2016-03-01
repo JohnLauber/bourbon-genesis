@@ -45,14 +45,14 @@ module.exports = function(grunt) {
 
         postcss: {
             options: {
-              map: true,
+              map: false,
               processors: [
                 require('postcss-flexboxfixer'),
                 require('postcss-gradientfixer'),
-                require('autoprefixer-core')({browsers: '> 2%'}),
+                require('autoprefixer')({browsers: '> 2%'}),
                 require('postcss-flexibility'),
-                require('cssgrace'),
-                require('csswring')
+                require('css-mqpacker'),
+                require('cssnano'),
               ]
             },
             dist: {
