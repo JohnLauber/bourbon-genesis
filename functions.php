@@ -40,7 +40,7 @@ function child_theme_setup() {
 	function bourbon_genesis_enqueue_scripts() {
 	 wp_enqueue_style( 'bourbon-genesis-google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
 	}
-	
+
 	// Image Sizes
 	// add_image_size( $name, $width = 0, $height = 0, $crop = false );
 
@@ -163,7 +163,7 @@ function child_theme_setup() {
 
 	// Remove Query Strings From Static Resources
 	add_filter( 'script_loader_src', 'mb_remove_script_version', 15, 1 );
-	//DO NOT do the following if enqueueing Google Fonts. 
+	//DO NOT do the following if enqueueing Google Fonts.
 	//add_filter( 'style_loader_src', 'mb_remove_script_version', 15, 1 );
 
 	// Remove Read More Jump
@@ -181,10 +181,10 @@ function child_theme_setup() {
 	Require Plugins
 	*****************************************/
 
-	require_once( CHILD_DIR . '/lib/class-tgm-plugin-activation.php' );
-	require_once( CHILD_DIR . '/lib/theme-require-plugins.php' );
-
-	add_action( 'tgmpa_register', 'mb_register_required_plugins' );
+	// require_once( CHILD_DIR . '/lib/class-tgm-plugin-activation.php' );
+	// require_once( CHILD_DIR . '/lib/theme-require-plugins.php' );
+	//
+	// add_action( 'tgmpa_register', 'mb_register_required_plugins' );
 
 }
 

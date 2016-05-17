@@ -53,8 +53,12 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 Requires: [bourbon.io](http://bourbon.io/)
 
 ### Changelog
+
+#### Version 1.5.1
+Removing the required plugin functionality. SEO plugin is now optional as I'm moving towards SEO Framework and not using Yoast SEO. 
+
 #### Version 1.5
-Removed some older PostCSS plugins. Added in new dependencies for minimizing and packing the stylesheet. 
+Removed some older PostCSS plugins. Added in new dependencies for minimizing and packing the stylesheet.
 
 #### Version 1.4
 Moved the Google Font enqueue to the functions file and removed the static resource filter on the CSS files. This was not allowing the enqueueing of the Google fonts. Just replace the string from Google Fonts if using different fonts and change SCSS appropriately.
