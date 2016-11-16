@@ -53,9 +53,11 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 Requires: [bourbon.io](http://bourbon.io/)
 
 ### Changelog
+#### Version 2.0
+Updated the theme to utilize the latest changes in the Genesis Sample theme. Cut out any "old stuff". Calling it version 2.0 since I reworked the SCSS files.
 
 #### Version 1.5.1
-Removing the required plugin functionality. SEO plugin is now optional as I'm moving towards SEO Framework and not using Yoast SEO. 
+Removing the required plugin functionality. SEO plugin is now optional as I'm moving towards SEO Framework and not using Yoast SEO.
 
 #### Version 1.5
 Removed some older PostCSS plugins. Added in new dependencies for minimizing and packing the stylesheet.
