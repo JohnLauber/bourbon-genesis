@@ -23,13 +23,6 @@ function mb_register_required_plugins() {
 		// ),
 
 		// array(
-		// 	'name' 				=> 'Pods - Custom Content Types and Fields',
-		// 	'slug' 				=> 'pods',
-		// 	'required' 			=> true,
-		// 	'force_activation'	=> true
-		// ),
-
-		// array(
 		// 	'name' 				=> 'Google Analytics for WordPress',
 		// 	'slug' 				=> 'google-analytics-for-wordpress',
 		// 	'required' 			=> true,
@@ -39,7 +32,7 @@ function mb_register_required_plugins() {
 	);
 
 	// Change this to your theme text domain, used for internationalising strings
-	$theme_text_domain = 'mbplugins';
+	$theme_text_domain = 'bourbon-genesis';
 
 	/**
 	 * Array of configuration settings. Amend each line as needed.
