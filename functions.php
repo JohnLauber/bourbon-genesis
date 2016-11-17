@@ -249,16 +249,16 @@ function child_theme_setup() {
 		return $args;
 
 	}
-	
+
+	// Unregister the superfish scripts
+	add_action( 'wp_enqueue_scripts', 'mb_unregister_superfish' );
+
 }
 
 
 /****************************************
 Misc Theme Functions
 *****************************************/
-
-// Unregister the superfish scripts
-add_action( 'wp_enqueue_scripts', 'mb_unregister_superfish' );
 
 // Filter Yoast SEO Metabox Priority
 add_filter( 'wpseo_metabox_prio', 'mb_filter_yoast_seo_metabox' );
