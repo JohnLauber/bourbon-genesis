@@ -35,7 +35,7 @@ function child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 
 	//* Set Localization (do not remove)
-	load_child_theme_textdomain( 'bourbon-genesis', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'bourbon-genesis' ) );
+	load_child_theme_textdomain( 'bpxglobal', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'bpxglobal' ) );
 
 	//* Add Image upload and Color select to WordPress Theme Customizer
 	require_once( get_stylesheet_directory() . '/lib/customize.php' );
@@ -50,15 +50,17 @@ function child_theme_setup() {
 	add_action( 'wp_enqueue_scripts', 'bourbon_genesis_enqueue_scripts' );
 	function bourbon_genesis_enqueue_scripts() {
 
-		wp_enqueue_style( 'genesis-sample-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700', array(), CHILD_THEME_VERSION );
+		wp_enqueue_style( 'genesis-google-fonts', '//fonts.googleapis.com/css?family=Exo+2:400,600,700|Shadows+Into+Light+Two', array(), CHILD_THEME_VERSION );
+		wp_enqueue_style( 'animate-css', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', array(), CHILD_THEME_VERSION );
 		wp_enqueue_style( 'dashicons' );
 
-		wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . '/assets/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'animate-on-scroll', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js', array(), '', true );
+		wp_enqueue_script( 'genesis-responsive-menu', get_stylesheet_directory_uri() . '/assets/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
 		$output = array(
 			'mainMenu' => __( 'Menu', 'genesis-sample' ),
 			'subMenu'  => __( 'Menu', 'genesis-sample' ),
 		);
-		wp_localize_script( 'genesis-sample-responsive-menu', 'genesisSampleL10n', $output );
+		wp_localize_script( 'genesis-responsive-menu', 'genesisSampleL10n', $output );
 
 	}
 
@@ -76,7 +78,7 @@ function child_theme_setup() {
 	add_theme_support( 'genesis-accessibility', array( '404-page', 'drop-down-menu', 'headings', 'rems', 'search-form', 'skip-links' ) );
 
 	//* Rename primary and secondary navigation menus
-	add_theme_support( 'genesis-menus' , array( 'primary' => __( 'After Header Menu', 'bourbon-genesis' ), 'secondary' => __( 'Footer Menu', 'bourbon-genesis' ) ) );
+	add_theme_support( 'genesis-menus' , array( 'primary' => __( 'After Header Menu', 'bpxglobal' ), 'secondary' => __( 'Footer Menu', 'bpxglobal' ) ) );
 
 	//* Reposition the secondary navigation menu
 	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
@@ -133,8 +135,8 @@ function child_theme_setup() {
 
 	//* Add support for custom header
 	add_theme_support( 'custom-header', array(
-		'width'           => 600,
-		'height'          => 160,
+		'width'           => 400,
+		'height'          => 82,
 		'header-selector' => '.site-title a',
 		'header-text'     => false,
 		'flex-height'     => true,
@@ -253,6 +255,8 @@ function child_theme_setup() {
 	// Unregister the superfish scripts
 	add_action( 'wp_enqueue_scripts', 'mb_unregister_superfish' );
 
+
+	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 }
 
 

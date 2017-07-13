@@ -1,68 +1,241 @@
 /* GENERAL */
 body {
 	background: white;
+	font-family: 'Exo 2', sans-serif;
 }
 
 a,
 a:visited {
 	color: $linkColor;
 }
+
 a:hover {
 	color: $linkHoverColor;
 }
 
 ::-moz-selection {
-  background: $selectionColor;
-  text-shadow: none;
+	background: $selectionColor;
+	text-shadow: none;
 }
 
 ::selection {
-  background: $selectionColor;
-  text-shadow: none;
+	background: $selectionColor;
+	text-shadow: none;
+}
+/* HEADINGS / TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Exo 2', sans-serif;
 }
 
-/* HEADINGS / TYPOGRAPHY */
-h1, h2, h3, h4 { }
-h1 { }
-h2 { }
-h3 { }
-h4 { }
+h1 {}
 
+h2 {}
+
+h3 {}
+
+h4 {}
 /* STRUCTURE */
 // .site-container { max-width: $pageWidth; }
-.site-container { }
-.wrap { }
 
+.site-container {}
+
+.wrap {}
 /* HEADER */
-.site-header { }
-.title-area { }
-.site-title { }
-.site-description { }
-.header-widget-area { }
+.site-header {}
+
+.title-area {}
+
+.site-title {}
+
+.site-description {}
+
+.header-widget-area {}
 
 /* NAV */
-.nav-primary { }
-.nav-secondary { }
+.nav-primary {}
+
+.nav-secondary {}
 
 /* MAIN */
-.site-inner { }
-.content-sidebar-wrap { }
-.content { }
+.home .site-inner {
+	padding: 0;
+	max-width: 100%;
 
+	& .wrap {
+		max-width: 100%;
+	}
+}
+
+.site-inner {
+
+}
+.content-sidebar-wrap {}
+
+.content {}
 /* SIDEBAR */
-.sidebar-primary { }
-
+.sidebar-primary {}
 /* FOOTER */
-.footer-widgets { }
-.site-footer { }
+.footer-widgets {}
 
-
+.site-footer {}
 /****************************************
 PAGE TEMPLATES
 *****************************************/
-
 /* Home Page */
-.home { }
-
+.home {}
 /* Blog Page */
-.blog { }
+.blog {}
+/* Slides */
+.slide-1 {
+	background: url("http://bpxglobal.pl/wp-content/themes/bpx/images/slide-1.png") repeat top center;
+	min-height: 750px;
+	color: #fff;
+	padding: 50px 0 0;
+	position: relative;
+}
+
+.slide {
+	& h2 {
+		font-size: 55px;
+		color: #fff;
+	}
+
+	& .wrapper {
+		padding: 70px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+	}
+
+	& p {
+		font-weight: 200;
+		line-height: 150%;
+		font-style: italic;
+		font-size: 18px;
+		padding: 0 0 30px 0;
+	}
+
+	& p a {
+		color: #fff;
+		text-decoration: none;
+
+		&:after {
+		  display: none;
+		}
+
+		&:hover span {
+		  padding: 0 52px 0 0;
+		}
+
+		& span {
+	    background: url(assets/images/arr-1.png) no-repeat right center;
+	    padding: 0 45px 0 0;
+	    transition: padding 0.1s linear;
+		}
+	}
+}
+
+#slide-services {
+	background: #766661 url("assets/images/services-bg.jpg") bottom center repeat-x;
+	height: 475px;
+}
+
+a.imglink-wrap {
+	display: block;
+	outline: none;
+}
+
+.clipper {
+	width: 70%;
+}
+/* ship animation */
+#clipper,
+#clipper-sub,
+#fale {
+	display: block;
+	animation-duration: 1s;
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+}
+
+#fale {
+	margin-top: -11%;
+}
+
+#clipper-sub.swing,
+#clipper.swing {
+	transform-origin: bottom center;
+	animation-duration: 9s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+}
+
+#lens,
+#luneta,
+#smallclouds {
+	display: block;
+}
+
+#smallclouds {
+	position: absolute;
+	top: 25.5%;
+	left: 33.8%;
+	animation-duration: 6s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+}
+
+#lens {
+	position: absolute;
+	top: 25.5%;
+	left: 33.2%;
+	animation-duration: 6s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+}
+
+.rightside {
+	width: 57%;
+	padding: 25px 0 0;
+	float: right;
+}
+
+.leftside {
+	width: 33%;
+	padding: 15px;
+	position: relative;
+	float: left;
+}
+
+.leftside #luneta {
+	// top: 25%;
+	position: absolute;
+	top: 0;
+}
+
+.leftside #lens {
+	top: 42%;
+	left: 39.2%;
+	// top: 25%;
+	// left: 32.2%;
+}
+
+.leftside #smallclouds {
+	// top: 25.6%;
+	// left: 33.5%;
+	top: 41.6%;
+	left: 41.5%;
+}
+
+.sub-services #lens {
+	top: 25%;
+	left: 15%;
+}
+
+.sub-services #smallclouds {
+	top: 25.6%;
+	left: 36.5%;
+}

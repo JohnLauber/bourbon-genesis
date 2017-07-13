@@ -56,10 +56,10 @@
 		}
 		$this.attr( 'id', 'mobile-' + $( nav ).attr( id ) );
 	}
-	
+
 	// check CSS rule to determine width
 	function _combineMenus(){
-		if ( ( $( '.js nav' ).css( 'position' ) == 'relative' ) && $( '.nav-primary' ).length > 0 ) { // depends on .js nav having position: relative; in style.css
+		if ( ( $( '.js nav' ).css( 'position' ) === 'relative' ) && $( '.nav-primary' ).length > 0 ) { // depends on .js nav having position: relative; in style.css
 			$( '.nav-header .menu > li' ).addClass( 'moved-item' ); // tag moved items so we can move them back
 			$( '.nav-header .menu > li' ).prependTo( '.nav-primary ul.genesis-nav-menu' );
 			$( '.nav-header' ).hide();
@@ -186,7 +186,7 @@
 
 		// run test on resize of the window
 		$( window ).resize( _combineMenus );
-		
+
 		genesisSample.params = typeof genesisSampleL10n === 'undefined' ? '' : genesisSampleL10n;
 
 		if ( typeof genesisSample.params !== 'undefined' ) {

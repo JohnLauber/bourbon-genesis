@@ -148,7 +148,7 @@ module.exports = function(grunt) {
                     src : 'style.css'
                 },
                 options: {
-                    proxy: "local.test.dev", // < change to local site address
+                    proxy: "local.bpx.dev", // < change to local site address
                     ghostmode: false,
                     port: 8080,
                     tunnel: "testing",
@@ -160,7 +160,7 @@ module.exports = function(grunt) {
     });
 
     // rename tasks
-    grunt.renameTask('rsync', 'deploy');
+    // grunt.renameTask('rsync', 'deploy');
 
     grunt.loadNpmTasks('grunt-browser-sync');
 
