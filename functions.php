@@ -35,7 +35,7 @@ function child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 
 	//* Set Localization (do not remove)
-	load_child_theme_textdomain( 'bpxglobal', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'bpxglobal' ) );
+	load_child_theme_textdomain( 'bourbon-genesis', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'bourbon-genesis' ) );
 
 	//* Add Image upload and Color select to WordPress Theme Customizer
 	require_once( get_stylesheet_directory() . '/lib/customize.php' );
@@ -50,7 +50,7 @@ function child_theme_setup() {
 	add_action( 'wp_enqueue_scripts', 'bourbon_genesis_enqueue_scripts' );
 	function bourbon_genesis_enqueue_scripts() {
 
-		wp_enqueue_style( 'genesis-google-fonts', '//fonts.googleapis.com/css?family=Exo+2:400,600,700|Shadows+Into+Light+Two', array(), CHILD_THEME_VERSION );
+		wp_enqueue_style( 'genesis-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700', array(), CHILD_THEME_VERSION );
 		wp_enqueue_style( 'animate-css', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', array(), CHILD_THEME_VERSION );
 		wp_enqueue_style( 'dashicons' );
 
@@ -78,7 +78,7 @@ function child_theme_setup() {
 	add_theme_support( 'genesis-accessibility', array( '404-page', 'drop-down-menu', 'headings', 'rems', 'search-form', 'skip-links' ) );
 
 	//* Rename primary and secondary navigation menus
-	add_theme_support( 'genesis-menus' , array( 'primary' => __( 'After Header Menu', 'bpxglobal' ), 'secondary' => __( 'Footer Menu', 'bpxglobal' ) ) );
+	add_theme_support( 'genesis-menus' , array( 'primary' => __( 'After Header Menu', 'bourbon-genesis' ), 'secondary' => __( 'Footer Menu', 'bourbon-genesis' ) ) );
 
 	//* Reposition the secondary navigation menu
 	remove_action( 'genesis_after_header', 'genesis_do_subnav' );

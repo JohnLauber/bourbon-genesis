@@ -90,7 +90,7 @@ gulp.task('imagemin', () =>
 
 gulp.task('browserSync', function () {
     browserSync.init({
-      proxy: "local.bpx.dev"
+      proxy: "local.testing.dev"
   });
 });
 

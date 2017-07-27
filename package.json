@@ -13,8 +13,6 @@
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "browser-sync": "^2.18.12",
-    "css-mqpacker": "^4.0.0",
-    "cssnano": "^3.5.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.3.0",

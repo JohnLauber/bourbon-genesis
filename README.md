@@ -12,9 +12,9 @@ WordPress Starter Theme for use as Child Theme of the Genesis Framework for buil
 
 ## Usage
 
-The theme is setup to use [Grunt](http://gruntjs.com/) to compile Bourbon/SCSS, lint, concatenate and minify JavaScript (with source maps), optimize images, and [LiveReload](http://livereload.com/) the browser (with extension), with flexibility to add any additional tasks via the Gruntfile. Alternatively, you can use [CodeKit](http://incident57.com/codekit/) or whatever else you prefer to compile the SCSS and manage the JavaScript.
+The theme is setup to use [Gulp](http://gulpjs.com/) to compile Bourbon/SCSS, lint, concatenate and minify JavaScript (with source maps), optimize images, and [LiveReload](http://livereload.com/) the browser (with extension), with flexibility to add any additional tasks via the Gruntfile. Alternatively, you can use [CodeKit](http://incident57.com/codekit/) or whatever else you prefer to compile the SCSS and manage the JavaScript.
 
-Rename folder to your theme name, change the `assets/styles/source/style.scss` intro block to your theme information. Open the theme directory in terminal and run `npm install` to pull in all Grunt dependencies. Run `grunt` to execute tasks. Change theme as you will. If you have the LiveReload browser extension, it will reload after any SCSS or JS changes.
+Rename folder to your theme name, change the `assets/styles/source/style.scss` intro block to your theme information. Open the theme directory in terminal and run `npm install` to pull in all Gulp dependencies. Run `gulp` to execute tasks. Change theme as you will. If you have the LiveReload browser extension, it will reload after any SCSS or JS changes.
 
 - Compile `assets/styles/source/style.scss` to `style.css`
 - Compile `assets/styles/source/editor-style.scss` to `editor-style.css`
@@ -22,19 +22,14 @@ Rename folder to your theme name, change the `assets/styles/source/style.scss` i
 - Minify `assets/js/source/main.js` to `assets/js/main.min.js`
 - Publish and enjoy the fruits of your labor.
 
-To concatenate and minify your jQuery plugins, add them to the `assets/js/vendor` directory and add the `js` filename and path to the `Gruntfile` `uglify` task. Previous versions of the starter theme automatically pulled all plugins in the `vendor` directory, but this has changed to allow more granular control and for managing plugins and assets with bower.
+In the gulp.js file, be sure to change the BrowserSync line "local.testing.dev" to your local web address you want to sync.
 
-In the Grunt file, be sure to change the BrowserSync line "local.testing.dev" to your local web address you want to sync.
-
-Bourbon gets loaded as a dependency in package.json and gruntfile.js. There may be a better way to do this, but I haven’t found it yet.
+Bourbon gets loaded as a dependency in package.json and gulp.js. There may be a better way to do this, but I haven’t found it yet.
 
 ### Bower
 
 Supports [bower](https://github.com/bower/bower) to install and manage JavaScript dependencies in the `assets/js/vendor` folder.
 
-### Deployment
-
-The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/grunt-rsync). The Gruntfile includes setups for staging and production - edit your paths and host, then run `grunt rsync:staging` or `grunt rsync:production` to deploy your files via rsync.
 
 ### Features
 
@@ -53,6 +48,9 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 Requires: [bourbon.io](http://bourbon.io/)
 
 ### Changelog
+#### Version 2.1
+Now with Gulp. I noticed Grunt was starting to fall out of favor, through various blogs and decided I should switchover. So ignore anything that references Grunt and learn to use Gulp.
+
 #### Version 2.0
 Updated the theme to utilize the latest changes in the Genesis Sample theme. Cut out any "old stuff". Calling it version 2.0 since I reworked the SCSS files.
 
